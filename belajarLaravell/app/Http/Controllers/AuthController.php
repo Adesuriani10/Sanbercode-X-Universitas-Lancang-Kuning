@@ -8,7 +8,7 @@ class AuthController extends Controller
 {
     public function register()
     {
-        return view('Register');
+        return view('page.register');
     }
 
     public function welcome (Request $request)
@@ -16,6 +16,6 @@ class AuthController extends Controller
         $full_name = $request->input('full_name');
         $last_name = $request->input('last_name');
 
-        return view('welcome', ['full_name' => $full_name, 'last_name' => $last_name]);
+        return view('page.welcome', ['full_name' => $full_name, 'last_name' => $last_name]);
     }
 }
